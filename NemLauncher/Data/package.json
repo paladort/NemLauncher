@@ -1,0 +1,41 @@
+{
+   "name": "paladiumlauncher",
+   "version": "1.0.4",
+   "productName": "Paladium Launcher",
+   "description": "Paladium Launcher",
+   "main": "app/splash.html",
+   "license": "UNLICENSED",
+   "author": "Paladium",
+   "window": {
+      "title": "Paladium Launcher",
+      "width": 400,
+      "height": 500,
+      "frame": false,
+      "resizable": false,
+      "position": "center",
+      "icon": "app/assets/images/icons/icon.png"
+   },
+   "chromium-args": "--enable-logging --v=1",
+   "manifestUrl": "http://download.paladium-pvp.fr/launcher/package.json",
+   "webkit": {
+      "plugin": true
+   },
+   "scripts": {
+      "start": "nw .",
+      "build": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ ./"
+   },
+   "dependencies": {
+      "adm-zip": "^0.4.16",
+      "node-fetch": "^2.6.1",
+      "nw": "^0.53.0",
+      "nw-autoupdater": "^1.1.11",
+      "xml-js": "^1.6.11"
+   },
+   "devDependencies": {
+      "nw-builder": "^3.5.7"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/FuflyPaladium/PaladiumLauncher"
+   }
+}
